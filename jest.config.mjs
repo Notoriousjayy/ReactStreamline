@@ -3,7 +3,7 @@ export default {
   transform: {
     "^.+\\.(ts|tsx|js|jsx)$": "babel-jest" // Use Babel for transformation
   },
-  extensionsToTreatAsEsm: [".ts", ".tsx", ".mjs"],
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"], // Supported extensions
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js" // Mock CSS imports
