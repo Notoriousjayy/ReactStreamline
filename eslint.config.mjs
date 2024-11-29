@@ -1,6 +1,5 @@
 export default [
   {
-    root: true,
     parser: '@typescript-eslint/parser', // Use TypeScript parser
     plugins: ['@typescript-eslint', 'react'], // Enable React and TypeScript linting
     extends: [
