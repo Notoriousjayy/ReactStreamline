@@ -14,23 +14,27 @@
     "web-vitals": "^3.3.2"
   },
   "scripts": {
-    "start": "webpack serve --config webpack.config.js",
-    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.mjs",
+    "build": "webpack --config webpack.config.mjs",
     "test": "jest",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
   },
-  "eslintConfig": {},
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx|js|jsx)$": [
+        "babel-jest",
+        {
+          "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react",
+            "@babel/preset-typescript"
+          ]
+        }
+      ]
+    },
+    "extensionsToTreatAsEsm": [".ts", ".tsx"],
+    "testEnvironment": "jest-environment-jsdom",
+    "moduleFileExtensions": ["js", "jsx", "ts", "tsx", "json", "node"]
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
