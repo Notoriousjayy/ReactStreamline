@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "jsx": "react-jsx"
+    "target": "esnext", // Use ESNext for modern JavaScript features
+    "lib": ["dom", "dom.iterable", "esnext"], // Include ESNext library definitions
+    "allowJs": true, // Allow JavaScript files
+    "skipLibCheck": true, // Skip type checks on declaration files
+    "esModuleInterop": true, // Enable compatibility with CommonJS modules
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable strict type-checking
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
+    "module": "esnext", // Use ESNext modules
+    "moduleResolution": "node", // Resolve modules as Node.js does
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Ensure TypeScript files are compiled independently
+    "noEmit": false, // Prevent emitting compiled files
+    "jsx": "react-jsx" // Use the new JSX transform for React
   },
-  "include": ["src"]
+  "include": ["src"] // Specify the files to include
 }
