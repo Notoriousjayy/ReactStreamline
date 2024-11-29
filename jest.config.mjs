@@ -1,7 +1,7 @@
-module.exports = {
-  testEnvironment: "jest-environment-jsdom",
+export default {
+  testEnvironment: "jest-environment-jsdom", // Specify test environment
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest" // Use Babel for JavaScript/TypeScript transformation
+    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest" // Use Babel for transformation
   },
   moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"], // Supported extensions
   moduleNameMapper: {
