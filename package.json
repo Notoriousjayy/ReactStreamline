@@ -14,11 +14,11 @@
     "web-vitals": "^3.3.2"
   },
   "scripts": {
-    "start": "webpack serve --config webpack.config.mjs",
-    "build": "webpack --config webpack.config.mjs",
-    "test": "jest",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
-  },
+  "start": "webpack serve --config webpack.config.mjs",
+  "build": "webpack --config webpack.config.mjs",
+  "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+  "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
+},
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.15",
