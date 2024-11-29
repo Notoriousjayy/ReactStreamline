@@ -1,4 +1,5 @@
-import { ESLint } from 'eslint';
+import eslintPluginReact from 'eslint-plugin-react';
+import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin';
 
 export default [
   {
@@ -18,14 +19,11 @@ export default [
         ecmaFeatures: {
           jsx: true // Enable JSX
         }
-      },
-      globals: {
-        ...ESLint.configGlobals // Include default globals
       }
     },
     plugins: {
-      '@typescript-eslint': require('@typescript-eslint/eslint-plugin'), // TypeScript plugin
-      react: require('eslint-plugin-react') // React plugin
+      '@typescript-eslint': eslintPluginTypeScript, // TypeScript plugin
+      react: eslintPluginReact // React plugin
     },
     rules: {
       // Recommended ESLint rules
