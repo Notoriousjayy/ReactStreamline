@@ -1,3 +1,5 @@
+import { ESLint } from 'eslint';
+import typescriptParser from '@typescript-eslint/parser'; // Import the TypeScript parser
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin';
 
@@ -12,13 +14,16 @@ export default [
   {
     files: ['src/**/*.{js,jsx,ts,tsx}'], // Target source files
     languageOptions: {
-      parser: '@typescript-eslint/parser', // Set the TypeScript parser
+      parser: typescriptParser, // Set the TypeScript parser
       parserOptions: {
         ecmaVersion: 2022, // Modern ECMAScript features
         sourceType: 'module', // Enable ES Modules
         ecmaFeatures: {
           jsx: true // Enable JSX
         }
+      },
+      globals: {
+        ...ESLint.configGlobals // Include default globals
       }
     },
     plugins: {
