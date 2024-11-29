@@ -18,7 +18,8 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/**/*.{js,jsx,ts,tsx}'],
+      files: ['**/*.{js,jsx,ts,tsx}'], // Adjust to lint all matching files
+      excludedFiles: ['node_modules/**', 'dist/**'], // Explicitly exclude unwanted files
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off'
       }
