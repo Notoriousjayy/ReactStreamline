@@ -21,14 +21,22 @@ export default [
         version: 'detect' // Automatically detect the React version
       }
     },
+    ignores: [
+      '**/node_modules/', // Ignore node_modules globally
+      '**/dist/', // Ignore dist directory globally
+      '**/build/' // Ignore build directory globally
+    ],
+    files: ['src/**/*.{js,jsx,ts,tsx}'], // Include all relevant files in src
     rules: {
-      // Add or adjust rules here as needed
+      // Example: Customize rules as needed
+      'react/prop-types': 'off', // Disable prop-types rule
+      '@typescript-eslint/no-explicit-any': 'warn' // Warn on explicit `any` usage
     },
     overrides: [
       {
-        files: ['**/*.ts', '**/*.tsx'], // Target TypeScript files
+        files: ['**/*.ts', '**/*.tsx'], // Specific rules for TypeScript files
         rules: {
-          '@typescript-eslint/no-explicit-any': 'warn' // Example: Warn for explicit `any` usage
+          '@typescript-eslint/explicit-function-return-type': 'off' // Example: Turn off explicit return types
         }
       }
     ]
